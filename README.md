@@ -11,10 +11,9 @@ the gates used to check the manuscript (`check_paper_*.py`, `check_anonymity.py`
 
 ## What is not here, and why
 
-The study corpus is not released. It consists of production coding-agent transcripts
-(Claude Code `.jsonl` session logs) and the session notes generated from them, recorded
-in an industrial setting; they contain proprietary source code and internal project
-details, so they are withheld under the CFP's privacy / non-disclosure exemption.
+The study corpus is not released. It consists of real coding-agent transcripts
+(Claude Code `.jsonl` session logs) and the session notes generated from them. These
+contain personal data and private source code, so they are withheld for privacy reasons.
 
 For reference, the frozen corpus (snapshot 2026-09-27) contains 2,602 transcripts and
 499 session notes, of which 300 sessions are paired (both a transcript and a note).
