@@ -1,0 +1,38 @@
+{
+  "__doc__": [
+    "Copy to paper_config.json (gitignored) and edit. Every key is optional;",
+    "paths.py documents the default for each. An environment variable",
+    "PAPER_<KEY> overrides both this file and the default.",
+    "",
+    "This file is the place for machine-specific and identifying values, so",
+    "that neither appears in the committed scripts or a released artifact.",
+    "",
+    "Defaults are chosen so a fresh clone runs without this file: in-repo",
+    "paths derive from the checkout, ~/.claude is where Claude Code keeps",
+    "transcripts on every platform, and traces_dir assumes the trace archive",
+    "is checked out beside this repo. Set a key here only to override one."
+  ],
+
+  "__paths__": "Directories outside the repository.",
+  "claude_home": "~/.claude",
+  "projects_dir": "~/.claude/projects",
+  "jobs_dir": "~/.claude/jobs",
+  "telemetry_log": "~/.claude/prompt-context-telemetry.jsonl",
+  "traces_dir": "../agent-session-traces/traces",
+
+  "__identity__": [
+    "Strings that appear INSIDE the corpus text, which the parsing and",
+    "scrubbing code must recognise to behave correctly. Defaults derive from",
+    "the running machine and the checkout directory name, which is what the",
+    "corpus actually contains, so these usually need no entry here.",
+    "Set them when the corpus was captured under a different home directory",
+    "or when the notes repo appears under more than one spelling."
+  ],
+  "corpus_home": "~",
+  "corpus_repo_aliases": ["MyNotes", "mynotes"],
+  "corpus_sensitive_terms": ["MyNotes", "MyEmployer", "my-indexer-name"],
+  "indexer_dir_name": "my-indexer-name",
+  "rollup_src_dir": "../agent-session-rollup-level1/src/agent_session_rollup",
+
+  "__interpreter__": "Override with the PYTHON_INTERPRETER env var; defaults to the running interpreter."
+}
