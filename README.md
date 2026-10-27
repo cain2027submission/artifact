@@ -11,7 +11,7 @@ the gates used to check the manuscript (`check_paper_*.py`, `check_anonymity.py`
 
 ## What is not here, and why
 
-The study corpus is not released. It consists of real coding-agent transcripts
+The study corpus is not released. It consists of production coding-agent transcripts
 (Claude Code `.jsonl` session logs) and the session notes generated from them. These
 contain personal data and private source code, so they are withheld for privacy reasons.
 
