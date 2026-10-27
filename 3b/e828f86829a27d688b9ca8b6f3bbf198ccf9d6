@@ -1,0 +1,405 @@
+.gitignore
+  s_739e8d2d2239cb::t_8adabbce8bd3b7 1-3
+LICENSE
+  s_739e8d2d2239cb::t_09d4adf9b285d8 1-21
+README.md
+  s_739e8d2d2239cb::t_694d2c80feaf6a 1-40
+requirements.txt
+  s_739e8d2d2239cb::t_1ab4a17da1fb7b 1-7
+scripts/paper-rollups/ACTION_RECORD_FORMAT.md
+  s_739e8d2d2239cb::t_be08e024d4a73b 1-176
+scripts/paper-rollups/action_record.py
+  s_739e8d2d2239cb::t_fac317b60fa2d9 1-359
+scripts/paper-rollups/arm_names.py
+  s_739e8d2d2239cb::t_2acba6c1bf08bd 1-38
+scripts/paper-rollups/arm_rates.py
+  s_739e8d2d2239cb::t_069f83ffbda7f7 1-365
+scripts/paper-rollups/audit_paper_numbers.py
+  s_739e8d2d2239cb::t_53713b6cac3ca8 1-326
+scripts/paper-rollups/budget2k_heldout.py
+  s_739e8d2d2239cb::t_886d7279aedec0 1-124
+scripts/paper-rollups/budget2k_rerun.py
+  s_739e8d2d2239cb::t_834066ffb563d8 1-176
+scripts/paper-rollups/cap_and_injection_distribution.py
+  s_739e8d2d2239cb::t_4f337c8e85eb14 1-223
+scripts/paper-rollups/check_anonymity.py
+  s_739e8d2d2239cb::t_0c2d332914d2c9 1-213
+scripts/paper-rollups/check_paper_invariants.py
+  s_739e8d2d2239cb::t_65a80d03eb0bc7 1-2415
+scripts/paper-rollups/check_paper_length.py
+  s_739e8d2d2239cb::t_db2e1e272d8492 1-204
+scripts/paper-rollups/check_prose_cadence.py
+  s_739e8d2d2239cb::t_79663cf94d3d99 1-133
+scripts/paper-rollups/cluster_bootstrap.py
+  s_739e8d2d2239cb::t_088703e2a5e684 1-303
+scripts/paper-rollups/companion_late_window_no_digest.py
+  s_739e8d2d2239cb::t_779f8166e3a5b2 1-205
+scripts/paper-rollups/companion_raw89_no_digest.py
+  s_739e8d2d2239cb::t_c1803a20524375 1-71
+scripts/paper-rollups/correction_clause_split.py
+  s_739e8d2d2239cb::t_20b105e099d532 1-365
+scripts/paper-rollups/correction_detector.py
+  s_739e8d2d2239cb::t_9661e8edf9c1a7 1-624
+scripts/paper-rollups/correction_pairs.py
+  s_739e8d2d2239cb::t_0ae378a9386203 1-232
+scripts/paper-rollups/correction_seed_sample.py
+  s_739e8d2d2239cb::t_4b4c7556860f22 1-149
+scripts/paper-rollups/correction_survival_analyse.py
+  s_739e8d2d2239cb::t_ad457161be9d71 1-228
+scripts/paper-rollups/correction_survival_detector.py
+  s_739e8d2d2239cb::t_08a053d6d001c0 1-502
+scripts/paper-rollups/correction_survival_grade.py
+  s_739e8d2d2239cb::t_7b178a2bc5276b 1-367
+scripts/paper-rollups/debug_transcript.py
+  s_739e8d2d2239cb::t_1ffeabe79d33cd 1-79
+scripts/paper-rollups/delegation.py
+  s_739e8d2d2239cb::t_69860e1a3bfea7 1-139
+scripts/paper-rollups/estimate_arm_costs.py
+  s_739e8d2d2239cb::t_16c02b25026a69 1-221
+scripts/paper-rollups/freeze_corpus.py
+  s_739e8d2d2239cb::t_b0223d675ed5a8 1-234
+scripts/paper-rollups/freeze_corpus_rq4.py
+  s_739e8d2d2239cb::t_66945a25e72e5f 1-179
+scripts/paper-rollups/frontier_bands.py
+  s_739e8d2d2239cb::t_59747b312e27c0 1-403
+scripts/paper-rollups/fullar_vs_nodigest.py
+  s_739e8d2d2239cb::t_4695e59387dd3e 1-331
+scripts/paper-rollups/grading_common.py
+  s_739e8d2d2239cb::t_bba8aff0ac08d0 1-209
+scripts/paper-rollups/grading_rule_grid.py
+  s_739e8d2d2239cb::t_86d2e9889710f0 1-197
+scripts/paper-rollups/hazard_detection.py
+  s_739e8d2d2239cb::t_ba9a8269613201 1-69
+scripts/paper-rollups/heldout_rollup_error_test.py
+  s_739e8d2d2239cb::t_02e2d9b504bf65 1-115
+scripts/paper-rollups/heldout_rollup_haiku_generate.py
+  s_739e8d2d2239cb::t_f8db115ebcc83e 1-183
+scripts/paper-rollups/heldout_rollup_haiku_test.py
+  s_739e8d2d2239cb::t_82e9726a5863fb 1-118
+scripts/paper-rollups/heldout_rollup_run.py
+  s_739e8d2d2239cb::t_83be1ab9ba6f24 1-161
+scripts/paper-rollups/holdout_question_gen.py
+  s_739e8d2d2239cb::t_a43634fd5e78ef 1-622
+scripts/paper-rollups/human_grading_sample.py
+  s_739e8d2d2239cb::t_cdeb81977ebfd7 1-184
+scripts/paper-rollups/human_grading_score.py
+  s_739e8d2d2239cb::t_285869c9050901 1-77
+scripts/paper-rollups/human_turns.py
+  s_739e8d2d2239cb::t_18eee287a9177d 1-317
+scripts/paper-rollups/independent_regrade.py
+  s_739e8d2d2239cb::t_782f5f279c3848 1-249
+scripts/paper-rollups/jsonl_loader.py
+  s_739e8d2d2239cb::t_fffc3948481f90 1-147
+scripts/paper-rollups/legacy/README.md
+  s_739e8d2d2239cb::t_758768c560a4c2 1-16
+scripts/paper-rollups/make_candidate_figures.py
+  s_739e8d2d2239cb::t_de67b1fe4fbab7 1-489
+scripts/paper-rollups/make_figures.py
+  s_739e8d2d2239cb::t_5baf7f0a1a960b 1-263
+scripts/paper-rollups/measure_action_record_cl100k.py
+  s_739e8d2d2239cb::t_d2a888bef06b1e 1-83
+scripts/paper-rollups/measure_action_record_no_digests_cl100k.py
+  s_739e8d2d2239cb::t_74c227a9dfb46d 1-67
+scripts/paper-rollups/measure_action_record_sizes.py
+  s_739e8d2d2239cb::t_b47b7ab2e0be31 1-165
+scripts/paper-rollups/measure_vendor_reasoning_persistence.py
+  s_739e8d2d2239cb::t_836c17e84a7d2a 1-82
+scripts/paper-rollups/paper_config.example.json
+  s_739e8d2d2239cb::t_8f137c2078bf80 1-38
+scripts/paper-rollups/part1_structural_loss.py
+  s_739e8d2d2239cb::t_093abb8711afa1 1-422
+scripts/paper-rollups/part2_question_retention.py
+  s_739e8d2d2239cb::t_175d8a7376a7ff 1-516
+scripts/paper-rollups/part2_streamlined.py
+  s_739e8d2d2239cb::t_26856e36b5501b 1-327
+scripts/paper-rollups/part3_dead_end_verification.py
+  s_739e8d2d2239cb::t_8e847c96c86548 1-308
+scripts/paper-rollups/part3_simple.py
+  s_739e8d2d2239cb::t_d79741470129cb 1-232
+scripts/paper-rollups/part3_streamlined.py
+  s_739e8d2d2239cb::t_f81a01ed08c57d 1-235
+scripts/paper-rollups/patch_note_rq3.py
+  s_739e8d2d2239cb::t_6300bd8889b3ff 1-271
+scripts/paper-rollups/path_extract.py
+  s_739e8d2d2239cb::t_3cd80a2d07668a 1-505
+scripts/paper-rollups/paths.py
+  s_739e8d2d2239cb::t_92c4f521a0d861 1-229
+scripts/paper-rollups/pooled_estimate.py
+  s_739e8d2d2239cb::t_2bc256175445c9 1-230
+scripts/paper-rollups/position_heldout_vs_design.py
+  s_739e8d2d2239cb::t_82b2404a8fc063 1-198
+scripts/paper-rollups/probe_positive_control.py
+  s_739e8d2d2239cb::t_68413e07f57678 1-200
+scripts/paper-rollups/probe_positive_control_diagnose.py
+  s_739e8d2d2239cb::t_cf28d3ab0ffed2 1-227
+scripts/paper-rollups/probe_stratified_measurement.py
+  s_739e8d2d2239cb::t_0eaee1814313b9 1-491
+scripts/paper-rollups/probe_stratified_measurement_v2.py
+  s_739e8d2d2239cb::t_9aafa9c8553691 1-403
+scripts/paper-rollups/probe_stratified_question_gen.py
+  s_739e8d2d2239cb::t_6aebda2461d602 1-448
+scripts/paper-rollups/probe_stratified_question_gen_v2.py
+  s_739e8d2d2239cb::t_f11a7b51815413 1-428
+scripts/paper-rollups/probe_window_coverage_model.py
+  s_739e8d2d2239cb::t_3054a69577e00b 1-142
+scripts/paper-rollups/probe_zero_context.py
+  s_739e8d2d2239cb::t_41cd013aeb3f82 1-145
+scripts/paper-rollups/public_composition.py
+  s_739e8d2d2239cb::t_8fe919d9d97b27 1-77
+scripts/paper-rollups/replication2_power_sim.py
+  s_739e8d2d2239cb::t_54e30c3d8b55ef 1-86
+scripts/paper-rollups/replication2_supply.py
+  s_739e8d2d2239cb::t_846efdc2da2737 1-39
+scripts/paper-rollups/replication_analysis.py
+  s_739e8d2d2239cb::t_6f5f1c1f5f0cee 1-112
+scripts/paper-rollups/replication_common.py
+  s_739e8d2d2239cb::t_7b7c203c5d3e84 1-89
+scripts/paper-rollups/replication_draw.py
+  s_739e8d2d2239cb::t_c9310fe95e743b 1-142
+scripts/paper-rollups/replication_freeze.py
+  s_739e8d2d2239cb::t_3b1dc15160e4cd 1-69
+scripts/paper-rollups/replication_power_sim.py
+  s_739e8d2d2239cb::t_a30f98ba5ba098 1-86
+scripts/paper-rollups/replication_rollup_run.py
+  s_739e8d2d2239cb::t_084f36342748d1 1-98
+scripts/paper-rollups/replication_rollup_test.py
+  s_739e8d2d2239cb::t_d476905a980135 1-122
+scripts/paper-rollups/replication_run.py
+  s_739e8d2d2239cb::t_e8a290e9ab7250 1-185
+scripts/paper-rollups/resume_rq3.py
+  s_739e8d2d2239cb::t_5cf93e641e0e26 1-377
+scripts/paper-rollups/resume_rq3_v2.py
+  s_739e8d2d2239cb::t_320de679af0012 1-371
+scripts/paper-rollups/rollup_provenance_manifest.py
+  s_739e8d2d2239cb::t_c73b53aafa1644 1-84
+scripts/paper-rollups/rq0_query_workload.py
+  s_739e8d2d2239cb::t_1d4be427222b8d 1-222
+scripts/paper-rollups/rq1_signal_composition.py
+  s_739e8d2d2239cb::t_2f2762b693355f 1-406
+scripts/paper-rollups/rq1_signal_composition_corrected.py
+  s_739e8d2d2239cb::t_90242d6815a422 1-467
+scripts/paper-rollups/rq2_compression_corrected.py
+  s_739e8d2d2239cb::t_cd44c73cb420d0 1-380
+scripts/paper-rollups/rq2_rq5_compression_cost.py
+  s_739e8d2d2239cb::t_870e41015ce2f3 1-490
+scripts/paper-rollups/rq3_action_record_arm.py
+  s_739e8d2d2239cb::t_68fbcbd23aa005 1-279
+scripts/paper-rollups/rq3_action_record_no_digest_arm.py
+  s_739e8d2d2239cb::t_f8efd43b47b17e 1-204
+scripts/paper-rollups/rq3_answer_only_arm.py
+  s_739e8d2d2239cb::t_72340cd535cf3b 1-321
+scripts/paper-rollups/rq3_arm_probe_overlap.py
+  s_739e8d2d2239cb::t_2fe699f3c1f241 1-310
+scripts/paper-rollups/rq3_artifact_citation.py
+  s_739e8d2d2239cb::t_37f9aeac2efc4b 1-300
+scripts/paper-rollups/rq3_artifact_detail_truncation.py
+  s_739e8d2d2239cb::t_8f5eec42ea980e 1-324
+scripts/paper-rollups/rq3_budget_ladder.py
+  s_739e8d2d2239cb::t_0765f752f29b55 1-328
+scripts/paper-rollups/rq3_cap400_control.py
+  s_739e8d2d2239cb::t_8c5fd8c0d4c2e6 1-243
+scripts/paper-rollups/rq3_cap400_run.py
+  s_739e8d2d2239cb::t_fdfc4c5511b4d9 1-570
+scripts/paper-rollups/rq3_claim_heading_pointer.py
+  s_739e8d2d2239cb::t_439864e1757125 1-270
+scripts/paper-rollups/rq3_confidence_rederive.py
+  s_739e8d2d2239cb::t_0b4301860c87b4 1-244
+scripts/paper-rollups/rq3_continuation_only_arm.py
+  s_739e8d2d2239cb::t_8cc56aeb0d3c27 1-348
+scripts/paper-rollups/rq3_control_prose_analysis.py
+  s_739e8d2d2239cb::t_39e53ff8495951 1-125
+scripts/paper-rollups/rq3_control_prose_arms.py
+  s_739e8d2d2239cb::t_698efbb6f11628 1-367
+scripts/paper-rollups/rq3_delegation_reweight.py
+  s_739e8d2d2239cb::t_faaaebd7fd05e0 1-565
+scripts/paper-rollups/rq3_dense_encoding_arms.py
+  s_739e8d2d2239cb::t_b15727c7e97fd4 1-465
+scripts/paper-rollups/rq3_dialogue_vs_prose_transitions.py
+  s_739e8d2d2239cb::t_68abd28da77bec 1-115
+scripts/paper-rollups/rq3_error_rate_fix.py
+  s_739e8d2d2239cb::t_82c1a9ea7dfd49 1-189
+scripts/paper-rollups/rq3_error_rates_by_set.py
+  s_739e8d2d2239cb::t_6e4d573b5e9d90 1-100
+scripts/paper-rollups/rq3_headline_recompute.py
+  s_739e8d2d2239cb::t_413dcde52e8541 1-391
+scripts/paper-rollups/rq3_heldout_analysis.py
+  s_739e8d2d2239cb::t_4e430b3d84bde1 1-547
+scripts/paper-rollups/rq3_heldout_arms.py
+  s_739e8d2d2239cb::t_83ae1890e1f2ac 1-414
+scripts/paper-rollups/rq3_heldout_budget.py
+  s_739e8d2d2239cb::t_eea21a7e6dbda4 1-79
+scripts/paper-rollups/rq3_heldout_equivalence_rebuild.py
+  s_739e8d2d2239cb::t_d8f6fea2e0e158 1-172
+scripts/paper-rollups/rq3_heldout_equivalence_test.py
+  s_739e8d2d2239cb::t_d13669eb8909ca 1-30
+scripts/paper-rollups/rq3_heldout_no_digest_extend.py
+  s_739e8d2d2239cb::t_729b81ce6da27b 1-232
+scripts/paper-rollups/rq3_heldout_questions.py
+  s_739e8d2d2239cb::t_431ae79739f76e 1-185
+scripts/paper-rollups/rq3_heldout_sensitivity.py
+  s_739e8d2d2239cb::t_e08719a3c82a12 1-128
+scripts/paper-rollups/rq3_heldout_show.py
+  s_739e8d2d2239cb::t_9bc52834f874b2 1-51
+scripts/paper-rollups/rq3_judge_agreement.py
+  s_739e8d2d2239cb::t_df99669c401d55 1-380
+scripts/paper-rollups/rq3_late_analyse.py
+  s_739e8d2d2239cb::t_c6f2b99dda6777 1-160
+scripts/paper-rollups/rq3_late_common.py
+  s_739e8d2d2239cb::t_15e0fd81174b49 1-180
+scripts/paper-rollups/rq3_late_control.py
+  s_739e8d2d2239cb::t_e3f2f230fcf808 1-149
+scripts/paper-rollups/rq3_late_control_analyse.py
+  s_739e8d2d2239cb::t_f53685ba64d9e8 1-115
+scripts/paper-rollups/rq3_late_preflight.py
+  s_739e8d2d2239cb::t_a0d74a16c6aec8 1-109
+scripts/paper-rollups/rq3_late_regrade_gate.py
+  s_739e8d2d2239cb::t_d10c05d6b6a2ea 1-58
+scripts/paper-rollups/rq3_late_window.py
+  s_739e8d2d2239cb::t_bbdf8cd4f239ac 1-428
+scripts/paper-rollups/rq3_long_rollup_spike.py
+  s_739e8d2d2239cb::t_e834ec48ee1ff6 1-470
+scripts/paper-rollups/rq3_majority_vote_grades.py
+  s_739e8d2d2239cb::t_506ab3fc099437 1-188
+scripts/paper-rollups/rq3_paired_comparison.py
+  s_739e8d2d2239cb::t_efdfd037d9f84e 1-172
+scripts/paper-rollups/rq3_path_recall.py
+  s_739e8d2d2239cb::t_ca25bdd1ce7172 1-285
+scripts/paper-rollups/rq3_per_class_mcnemar.py
+  s_739e8d2d2239cb::t_c4f5fbe17cef39 1-303
+scripts/paper-rollups/rq3_prefix_representativeness.py
+  s_739e8d2d2239cb::t_9f61ac2723185a 1-196
+scripts/paper-rollups/rq3_prompts_only_arm.py
+  s_739e8d2d2239cb::t_0e8ab5d2b82b65 1-319
+scripts/paper-rollups/rq3_prose_only_arm.py
+  s_739e8d2d2239cb::t_8e7d7a0ad58d9b 1-345
+scripts/paper-rollups/rq3_prose_only_budget_ladder.py
+  s_739e8d2d2239cb::t_51bc22c6097ba8 1-322
+scripts/paper-rollups/rq3_raw_transcript_arm.py
+  s_739e8d2d2239cb::t_120ac8229889f0 1-568
+scripts/paper-rollups/rq3_read_budget_arms.py
+  s_739e8d2d2239cb::t_7a24df0a323b03 1-555
+scripts/paper-rollups/rq3_regrade_rollup_arm.py
+  s_739e8d2d2239cb::t_114f7c7c3d2610 1-234
+scripts/paper-rollups/rq3_renumber.py
+  s_739e8d2d2239cb::t_55b18cf625b512 1-298
+scripts/paper-rollups/rq3_retention_summary.py
+  s_739e8d2d2239cb::t_9d12d6615d19f6 1-215
+scripts/paper-rollups/rq3_rollup_from_stripped_spike.py
+  s_739e8d2d2239cb::t_6f7afb01860bc5 1-330
+scripts/paper-rollups/rq3_rollup_from_stripped_spike_analysis.py
+  s_739e8d2d2239cb::t_67f775e87048ff 1-76
+scripts/paper-rollups/rq3_rollup_stripped_overlap.py
+  s_739e8d2d2239cb::t_cac0afab5fbb55 1-145
+scripts/paper-rollups/rq3_rollup_stripped_overlap_bias.py
+  s_739e8d2d2239cb::t_bbade7223d0985 1-309
+scripts/paper-rollups/rq3_short_sonnet_rollup_spike.py
+  s_739e8d2d2239cb::t_b0bfe0f1248157 1-230
+scripts/paper-rollups/rq3_sonnet_rollup_124.py
+  s_739e8d2d2239cb::t_04bd547d5fc06d 1-283
+scripts/paper-rollups/rq3_stripped_paired.py
+  s_739e8d2d2239cb::t_ed25e76299eb28 1-201
+scripts/paper-rollups/rq3_stripped_transcript_arm.py
+  s_739e8d2d2239cb::t_f14c34347f5ba0 1-337
+scripts/paper-rollups/rq3_three_way_paired.py
+  s_739e8d2d2239cb::t_0444e0ee5f03db 1-359
+scripts/paper-rollups/rq3_tool_inputs_only_arm.py
+  s_739e8d2d2239cb::t_0909edf5c66a8d 1-306
+scripts/paper-rollups/rq3_uniform_rollup_arm.py
+  s_739e8d2d2239cb::t_e747c74762ec3f 1-230
+scripts/paper-rollups/rq3_verbatim_arm.py
+  s_739e8d2d2239cb::t_4e490dd0a0d97c 1-225
+scripts/paper-rollups/rq3_zero_context_arm.py
+  s_739e8d2d2239cb::t_daabf2ab356fa1 1-240
+scripts/paper-rollups/rq4_batched.py
+  s_739e8d2d2239cb::t_de9b69699674e0 1-329
+scripts/paper-rollups/rq4_bm25_no_tool.py
+  s_739e8d2d2239cb::t_31c76bbdcf3483 1-179
+scripts/paper-rollups/rq4_known_item.py
+  s_739e8d2d2239cb::t_94fe6083e69156 1-1141
+scripts/paper-rollups/rq4_no_digest_probe.py
+  s_739e8d2d2239cb::t_b5fe9c177c3731 1-226
+scripts/paper-rollups/rq4_probes_from_rollups.py
+  s_739e8d2d2239cb::t_057dcaa26738d8 1-358
+scripts/paper-rollups/rq5_cold_cache_correction.py
+  s_739e8d2d2239cb::t_c01ddd8bbc140b 1-571
+scripts/paper-rollups/rq5_generation_cost.py
+  s_739e8d2d2239cb::t_20a16858764ce3 1-545
+scripts/paper-rollups/rq5_wholeread_token_ratio.py
+  s_739e8d2d2239cb::t_d0886cb9734b0c 1-701
+scripts/paper-rollups/rq6_attribution_regime.py
+  s_739e8d2d2239cb::t_2fe0eaa0ecce4d 1-1214
+scripts/paper-rollups/rq6_stripped_transcript_size.py
+  s_739e8d2d2239cb::t_f6a91fac0252f3 1-204
+scripts/paper-rollups/run_all.sh
+  s_739e8d2d2239cb::t_313602c989cc7a 1-30
+scripts/paper-rollups/sanitization_audit.py
+  s_739e8d2d2239cb::t_4126758dd30430 1-119
+scripts/paper-rollups/seconddraw_analysis.py
+  s_739e8d2d2239cb::t_b5d645a6745227 1-90
+scripts/paper-rollups/seconddraw_remainder_analysis.py
+  s_739e8d2d2239cb::t_0bc420f615b084 1-106
+scripts/paper-rollups/seconddraw_remainder_run.py
+  s_739e8d2d2239cb::t_38e89208740b35 1-44
+scripts/paper-rollups/seconddraw_run.py
+  s_739e8d2d2239cb::t_4eb5e6439eda61 1-44
+scripts/paper-rollups/sonnet1k_heldout.py
+  s_739e8d2d2239cb::t_9b4baaa88a94a3 1-413
+scripts/paper-rollups/spinoff_actionrecord_ablation.py
+  s_739e8d2d2239cb::t_9f9175f6cc0067 1-489
+scripts/paper-rollups/spinoff_actionrecord_circularity.py
+  s_739e8d2d2239cb::t_18071bbcd33f34 1-118
+scripts/paper-rollups/spinoff_axes_factorial_grid.py
+  s_739e8d2d2239cb::t_537fa57a7c4997 1-133
+scripts/paper-rollups/spinoff_frontier_bootstrap.py
+  s_739e8d2d2239cb::t_27cbcf6f3bf11b 1-241
+scripts/paper-rollups/spinoff_toolio_reanalysis.py
+  s_739e8d2d2239cb::t_78a32df4014aef 1-224
+scripts/paper-rollups/substrate_value.py
+  s_739e8d2d2239cb::t_ad4b2f87dbdea3 1-645
+scripts/paper-rollups/test_confidence_extraction.py
+  s_739e8d2d2239cb::t_360abec7aa4cc2 1-207
+scripts/paper-rollups/test_corpus.py
+  s_739e8d2d2239cb::t_428cf035f38df1 1-37
+scripts/paper-rollups/test_degenerate_guard.py
+  s_739e8d2d2239cb::t_b3a20db51e39bd 1-87
+scripts/paper-rollups/test_delegation.py
+  s_739e8d2d2239cb::t_39852048e75b94 1-108
+scripts/paper-rollups/test_grade_parsing.py
+  s_739e8d2d2239cb::t_21593aa0f4cdf7 1-172
+scripts/paper-rollups/test_part2.py
+  s_739e8d2d2239cb::t_f6c74851ad980e 1-111
+scripts/paper-rollups/test_path_recall.py
+  s_739e8d2d2239cb::t_80b050ef25c61e 1-351
+scripts/paper-rollups/test_prompts_only_selector.py
+  s_739e8d2d2239cb::t_5f1c1d3a5d3eb8 1-118
+scripts/paper-rollups/test_question_retention_parser.py
+  s_739e8d2d2239cb::t_9c3ffbea559e50 1-195
+scripts/paper-rollups/test_rq6_attribution_regime.py
+  s_739e8d2d2239cb::t_8327590fb3555a 1-584
+scripts/paper-rollups/test_unbound_names.py
+  s_739e8d2d2239cb::t_0f3edd875db588 1-80
+scripts/paper-rollups/test_wholeread_token_ratio.py
+  s_739e8d2d2239cb::t_b0b7b8541a9a02 1-286
+scripts/paper-rollups/verbatim_arm_coverage.py
+  s_739e8d2d2239cb::t_4100d508ca5892 1-106
+scripts/paper-rollups/verify_determinism.py
+  s_739e8d2d2239cb::t_f1963b1dc0caf7 1-126
+scripts/paper-rollups/verify_numbers_legacy.py
+  s_739e8d2d2239cb::t_9e0ad705b49b6c 1-270
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3be828f86829a27d688b9ca8b6f3bbf198ccf9d6",
+  "prompts": {},
+  "sessions": {
+    "s_739e8d2d2239cb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f486215f-5705-4a6f-928b-26c3c3ba6c64",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "hannes-fortis <157499826+hannes-fortis@users.noreply.github.com>"
+    }
+  }
+}
