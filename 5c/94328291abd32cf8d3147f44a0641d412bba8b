@@ -1,0 +1,19 @@
+README.md
+  s_0a91d372526539::t_b045a0230db047 13-25,31-32,35-36,60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c94328291abd32cf8d3147f44a0641d412bba8b",
+  "prompts": {},
+  "sessions": {
+    "s_0a91d372526539": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d29e3282-a403-4857-a09e-4ff51ff22c7d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "hannes-fortis <157499826+hannes-fortis@users.noreply.github.com>"
+    }
+  }
+}
