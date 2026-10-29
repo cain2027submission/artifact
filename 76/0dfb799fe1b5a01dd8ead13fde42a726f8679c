@@ -1,0 +1,73 @@
+scripts/paper-rollups/ACTION_RECORD_FORMAT.md
+  s_65b6c7a31904f3::t_f8e95e41b024fa 154,161,171-172
+scripts/paper-rollups/correction_clause_split.py
+  s_65b6c7a31904f3::t_effa1664a0259c 57
+scripts/paper-rollups/correction_detector.py
+  s_65b6c7a31904f3::t_00acfb4433fd93 17,25,354,357,475-476,478,482
+scripts/paper-rollups/correction_seed_sample.py
+  s_65b6c7a31904f3::t_96c921cd042c8e 17-18,43
+scripts/paper-rollups/correction_survival_analyse.py
+  s_65b6c7a31904f3::t_f558f5eb0dda5d 161
+scripts/paper-rollups/fullar_vs_nodigest.py
+  s_65b6c7a31904f3::t_9acc28cd66be3c 36
+scripts/paper-rollups/human_turns.py
+  s_65b6c7a31904f3::t_a505dc5711acf1 14
+scripts/paper-rollups/paper_config.example.json
+  s_65b6c7a31904f3::t_464895208de34d 21
+scripts/paper-rollups/part1_structural_loss.py
+  s_65b6c7a31904f3::t_0d9b0081680aa9 52,86
+scripts/paper-rollups/path_extract.py
+  s_65b6c7a31904f3::t_933b6054de4a10 19,22,135,137-138,217,271-272,275,478
+scripts/paper-rollups/paths.py
+  s_65b6c7a31904f3::t_fe4448f04ebea4 137
+scripts/paper-rollups/probe_stratified_measurement.py
+  s_65b6c7a31904f3::t_1feb7f97fda804 80
+scripts/paper-rollups/replication_rollup_run.py
+  s_65b6c7a31904f3::t_630c44c7c5f166 22-23,28,40
+scripts/paper-rollups/replication_rollup_test.py
+  s_65b6c7a31904f3::t_668a9a33571687 114-115,119
+scripts/paper-rollups/rq3_headline_recompute.py
+  s_65b6c7a31904f3::t_0abd06fe01da58 13,84,220
+scripts/paper-rollups/rq3_heldout_arms.py
+  s_65b6c7a31904f3::t_42b079a4c5eecd 58,87,98
+scripts/paper-rollups/rq3_heldout_questions.py
+  s_65b6c7a31904f3::t_dad8c31844b9e0 57
+scripts/paper-rollups/rq3_path_recall.py
+  s_65b6c7a31904f3::t_eb90b71fe3585f 141
+scripts/paper-rollups/rq3_read_budget_arms.py
+  s_65b6c7a31904f3::t_37e954203ef91b 78
+scripts/paper-rollups/rq3_renumber.py
+  s_65b6c7a31904f3::t_f4835a99298c08 29
+scripts/paper-rollups/rq3_three_way_paired.py
+  s_65b6c7a31904f3::t_3ccb5fad8908fa 79
+scripts/paper-rollups/rq5_cold_cache_correction.py
+  s_65b6c7a31904f3::t_48deff9f8a86e2 396
+scripts/paper-rollups/rq5_wholeread_token_ratio.py
+  s_65b6c7a31904f3::t_539fa3d40e5d51 273,615
+scripts/paper-rollups/rq6_attribution_regime.py
+  s_65b6c7a31904f3::t_9bb836d309be45 59,246-248,1033-1034,1047-1050
+scripts/paper-rollups/test_path_recall.py
+  s_65b6c7a31904f3::t_d85c55463dc5f0 45,83,167,178,270,301
+scripts/paper-rollups/test_prompts_only_selector.py
+  s_65b6c7a31904f3::t_400c6c12d35bc4 4,110-111
+scripts/paper-rollups/test_rq6_attribution_regime.py
+  s_65b6c7a31904f3::t_67d4fe77c21906 44,47,98,163,166,170,179
+scripts/paper-rollups/test_wholeread_token_ratio.py
+  s_65b6c7a31904f3::t_f0c152b7309460 164,260-261,263,266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "760dfb799fe1b5a01dd8ead13fde42a726f8679c",
+  "prompts": {},
+  "sessions": {
+    "s_65b6c7a31904f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90e1cd7d-4f20-4281-a801-8468896892d7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "hannes-fortis <157499826+hannes-fortis@users.noreply.github.com>"
+    }
+  }
+}
