@@ -34,9 +34,6 @@ Other files in `scripts/paper-rollups/`:
   and replication sets, regrading
 - **checks**: `test_*.py` (unit tests) and [`verify_determinism.py`](scripts/paper-rollups/verify_determinism.py) (verifies byte-identical reproduction)
 
-`scripts/unused/` holds exploratory and superseded scripts that no reported result
-depends on. They are kept for completeness and are not expected to run from there.
-
 ## What is not here, and why
 
 The study corpus is not released. It consists of production coding-agent transcripts

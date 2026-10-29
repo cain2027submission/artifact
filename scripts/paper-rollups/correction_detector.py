@@ -14,7 +14,7 @@ turns have been scored. ``--validate`` enforces the split by refusing to score
 the held-out half unless asked for explicitly.
 
 The gate is rewritten as well, because stage 1's gate could not have passed.
-Its check was ``if session_id == '6d7b783e'`` against a full uuid, so
+Its check was ``if session_id == 'e16fb0cc'`` against a full uuid, so
 ``positive_control_hit`` was unreachable and ``FAIL`` was a constant: a perfect
 detector would have been halted by the same line. So this gate is run against
 two deliberately broken detectors as well as the real one -- one that labels
@@ -22,7 +22,7 @@ everything a correction, which must make the gate pass, and one that labels
 nothing, which must make it fail. A gate that cannot be made to pass is
 indistinguishable from a detector that cannot work.
 
-Session ``6d7b783e`` is no longer the positive control. The pre-registration
+Session ``e16fb0cc`` is no longer the positive control. The pre-registration
 quotes its correction verbatim and explains which register makes it one, so any
 detector written afterwards has read the answer; clearing it is fitting, not
 validating. It is kept as a named sanity check whose result carries no weight.
@@ -351,10 +351,10 @@ def load_labels(repo_root: Path) -> Dict:
     return json.loads(path.read_text())
 
 
-def sanity_turn_6d7b783e() -> Optional[Dict]:
+def sanity_turn_e16fb0cc() -> Optional[Dict]:
     """The stage 1 positive control, kept as a fitted sanity check only."""
     projects = Path(os.path.expanduser('~/.claude/projects'))
-    matches = list(projects.glob('*/6d7b783e-*.jsonl'))
+    matches = list(projects.glob('*/e16fb0cc-*.jsonl'))
     if not matches:
         return None
     transcript = load_transcript(str(matches[0]))
@@ -472,14 +472,14 @@ def validate(repo_root: Path, score_heldout: bool, model: str = DETECTOR_MODEL) 
         'status': 'PASS' if all(c['status'] == 'PASS' for c in dn_results) else 'FAIL',
     }
 
-    # --- fitted sanity check on 6d7b783e ------------------------------------
-    sanity = sanity_turn_6d7b783e()
+    # --- fitted sanity check on e16fb0cc ------------------------------------
+    sanity = sanity_turn_e16fb0cc()
     if sanity is None:
-        result['fitted_sanity_6d7b783e'] = {'status': 'TRANSCRIPT NOT FOUND'}
+        result['fitted_sanity_e16fb0cc'] = {'status': 'TRANSCRIPT NOT FOUND'}
     else:
         sanity_labels = label_turns([{'id': sanity['id'], 'text': sanity['text']}], budget, model)
         got = sanity_labels.get(sanity['id'])
-        result['fitted_sanity_6d7b783e'] = {
+        result['fitted_sanity_e16fb0cc'] = {
             'turn_index': sanity['turn_index'],
             'detected': None if got is None else bool(got['label']),
             'weight': 'none; this turn is quoted verbatim in the pre-registration, so any '

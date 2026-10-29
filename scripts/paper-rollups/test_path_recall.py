@@ -42,7 +42,7 @@ def check(cond: bool, msg: str) -> None:
 def test_normalisation_unifies_relative_and_absolute() -> None:
     """A relative and an absolute form of one file must share one key.
 
-    This is the defect that made session 1758702b score 233%: the rollup said
+    This is the defect that made session 2abf578f score 233%: the rollup said
     `AGENTS.md` and the transcript held an absolute path, and nothing mapped
     those together, so the intersection of two sets naming the same four files
     was empty while the ratio of their sizes was 7/3.
@@ -80,7 +80,7 @@ def test_path_only_in_tool_argument_is_found() -> None:
     Bash is 54% of tool calls in this corpus and its paths live inside the
     `command` string. The old transcript extractor read only structured
     `file_path`/`path`/`paths` keys, so the single commonest way a session touches
-    a file was invisible to it -- session 715f5e5e is 38 Bash calls, 2 Edits and
+    a file was invisible to it -- session 372ca0e6 is 38 Bash calls, 2 Edits and
     1 Read, and the old extractor found one path in the whole transcript.
     """
     print("a path only in a tool-call argument is found on the transcript side")
@@ -164,7 +164,7 @@ def test_fixture_scores_exactly_fifty_percent() -> None:
         "## a fixture\n\n"
         "Edited `scripts/paper-rollups/freeze_corpus.py` and rewrote the\n"
         "section in `.claude/worktrees/some-wt/paper/main.tex`.\n\n"
-        "## the full trace is at ~/.cache/agent-session-traces/traces/fixture-0000\n"
+        "## the full trace is at ~/.cache/session-traces/traces/fixture-0000\n"
     )
     r_paths, root = px.rollup_paths(note)
     t_paths = px.transcript_paths(entries, surface=px.SURFACE_ACTED)
@@ -175,7 +175,7 @@ def test_fixture_scores_exactly_fifty_percent() -> None:
                     f"{sorted(px.match_transcript_paths(r_paths, t_paths))}")
     check(abs(rec - 0.5) < 1e-9, f"recall is exactly 50%, got {100 * rec:.4f}%")
 
-    trace = px.normalise("~/.cache/agent-session-traces/traces/fixture-0000")
+    trace = px.normalise("~/.cache/session-traces/traces/fixture-0000")
     check(trace is None or trace not in r_paths,
           "the trace-backlink path is not counted as a cited artifact")
 
@@ -267,7 +267,7 @@ def test_old_extractor_fails_these_cases() -> None:
              "input": {"file_path": f"{VAULT}/paper/main.tex"}}]},
     }]
     note = (f"---\nproject_dir: {VAULT}\n---\n\n"
-            "Touched `/home/user`, `scene.ts`, `src/mahjong` and\n"
+            "Touched `/home/user`, `scene.ts`, `src/game` and\n"
             "`~/.cache/traces/x`.\n")
     old_r, _ = p1.extract_files_from_rollup(note)
     old_t = p1.extract_files_from_transcript(entries)
@@ -298,7 +298,7 @@ def test_old_extractor_fails_these_cases() -> None:
           "new transcript extractor finds it")
 
     # 3. The old rollup side counts a directory and the trace boilerplate.
-    junk = {p for p in old_r if p in ("/home/user", "src/mahjong")
+    junk = {p for p in old_r if p in ("/home/user", "src/game")
             or "traces" in p}
     if junk:
         old_failures += 1

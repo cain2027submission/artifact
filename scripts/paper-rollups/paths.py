@@ -134,7 +134,7 @@ TELEMETRY_LOG = _dir(
 # absolute path. A home-relative default was wrong here -- the archive sits
 # next to the repo, not at the top of the home directory.
 TRACES_DIR = _dir(
-    "traces_dir", PRIMARY_CHECKOUT.parent / "agent-session-traces" / "traces"
+    "traces_dir", PRIMARY_CHECKOUT.parent / "session-traces" / "traces"
 )
 
 # Rollup level-1 source code directory (agent-session-rollup-level1/src/...).

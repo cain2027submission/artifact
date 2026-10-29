@@ -76,7 +76,7 @@ RECOVERABLE = {"correct", "partially_correct"}
 # hallucination, and counting it as one would reward arms that answer less.
 ATTEMPTED_EXCLUDES = {"absent"}
 
-# Session slugs look like 2026-09-18_claude-code_a8273208_explore-the-idea...
+# Session slugs look like 2026-09-18_claude-code_230b823e_example-task...
 # so the third underscore-delimited field is the first 8 hex of the session uuid.
 SLUG_UUID = re.compile(r"^\d{4}-\d{2}-\d{2}_[a-z-]+_([0-9a-f]{8})_")
 

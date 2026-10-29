@@ -19,13 +19,13 @@ MAIN_SESSIONS = SESSIONS_DIR  # read-only
 OUT, OUT_SENS = RR / "rollup_arm.jsonl", RR / "rollup_arm_sensitivity.jsonl"
 H.COST = RR / "cost_log.jsonl"
 H.CAP_USD = 5.0
-ALT = "2026-09-25_claude-code_0328a5cd_judged-eval-s-negative-verdict.md"
-PRIMARY_0328 = "2026-09-25_claude-code_0328a5cd_rrf-treats-correlated-evidence-as-independent.md"
+ALT = "2026-09-25_claude-code_2ce8e87b_example-claim-one.md"
+PRIMARY_0328 = "2026-09-25_claude-code_2ce8e87b_example-claim-two.md"
 
 
 def note_for(prefix):
     hits = sorted(glob.glob(str(MAIN_SESSIONS / f"*_{prefix}_*.md")))
-    if prefix == "0328a5cd":
+    if prefix == "2ce8e87b":
         return str(MAIN_SESSIONS / PRIMARY_0328)
     assert len(hits) == 1, (prefix, hits)
     return hits[0]
@@ -37,7 +37,7 @@ def load(sens):
     qs = [json.loads(l) for l in (D / "replication/questions.jsonl").open() if l.strip()]
     qs = [q for q in qs if q["question_id"] in ans]
     if sens:
-        qs = [q for q in qs if q["session_prefix"] == "0328a5cd"]
+        qs = [q for q in qs if q["session_prefix"] == "2ce8e87b"]
     for q in qs:
         q["_rollup"] = str(MAIN_SESSIONS / ALT) if sens else note_for(q["session_prefix"])
         q["_rid"] = q["question_id"]

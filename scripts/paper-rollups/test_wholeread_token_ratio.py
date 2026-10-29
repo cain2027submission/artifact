@@ -161,7 +161,7 @@ except ValueError as exc:
 else:
     check("aggregate refuses a row missing a token count", False, "accepted")
 
-drops = [{"session_id": "bb26f10d-14a4-4318-aead-512909db8405",
+drops = [{"session_id": "3a0d132f-0000-4000-8000-000000000001",
           "reason": "transcript_pruned_since_snapshot"}]
 rep2 = M.aggregate(rows, drops, man, iters=50)
 check("drops are recorded rather than absorbed as zeros",
@@ -257,13 +257,13 @@ check("a missing transcript produces no token counts",
       "raw_tokens" not in missing)
 
 # The real pruned session named in the brief, end to end.
-pruned = "bb26f10d-14a4-4318-aead-512909db8405"
-check("bb26f10d is in the frozen population", pruned in M.manifest_population(real))
+pruned = "3a0d132f-0000-4000-8000-000000000001"
+check("3a0d132f is in the frozen population", pruned in M.manifest_population(real))
 p = M.transcript_path_for(pruned, real)
-check("bb26f10d's manifest transcript no longer exists on disk",
+check("3a0d132f's manifest transcript no longer exists on disk",
       p is not None and not Path(p).exists(), str(p))
 row = M.measure_one((pruned, p, "# some rollup\n"))
-check("bb26f10d is dropped rather than measured",
+check("3a0d132f is dropped rather than measured",
       row.get("drop") == "transcript_unreadable", str(row)[:120])
 
 # --------------------------------------------------------------------------

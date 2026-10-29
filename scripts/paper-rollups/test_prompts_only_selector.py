@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Test the prompts-only selector on two sessions to verify correctness.
 
-Tests on session prefixes 1327c110 (large) and b766c7ce (small) to ensure:
+Tests on session prefixes 9c37ec9f (large) and 12a5c2da (small) to ensure:
 1. Total chars count
 2. ### USER count unchanged
 3. ### ASSISTANT count goes to 0
@@ -107,8 +107,8 @@ def main():
     print("Testing prompts-only selector on two sessions")
     print("="*70)
 
-    test_session("1327c110", by_prefix)
-    test_session("b766c7ce", by_prefix)
+    test_session("9c37ec9f", by_prefix)
+    test_session("12a5c2da", by_prefix)
 
     print(f"\n{'='*70}")
     print("Testing complete.")

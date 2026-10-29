@@ -11,7 +11,7 @@ human did not write, all of which arrive as ``type: "user"``:
 - **harness markers**, of which ``[Request interrupted by user for tool use]``
   is the common one -- a record *about* the human rather than *by* them.
 
-In the positive-control session ``6d7b783e`` that is 3 of 6 turns, so the
+In the positive-control session ``e16fb0cc`` that is 3 of 6 turns, so the
 pollution is not a rounding error at the session scale where a correction has
 to be found. A correction rate must be counted against human-authored turns
 only, per the pre-registration's stage 1 section.

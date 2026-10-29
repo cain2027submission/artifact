@@ -55,7 +55,7 @@ reported.
 
 Usage:
     rq3_heldout_arms.py --plan-only            # write/show the plan, no API calls
-    rq3_heldout_arms.py --only f7bd7d1f,8a4c5745   # smoke test
+    rq3_heldout_arms.py --only 37dc4cf9,c0be1f89   # smoke test
     rq3_heldout_arms.py                        # full planned run (resumable)
 """
 
@@ -84,7 +84,7 @@ OUT = {
     "output_stripped": DATA / "rq3_heldout_stripped_arm.jsonl",
 }
 ARTIFACTS = Path(os.environ.get(
-    "HELDOUT_ARTIFACTS", str(JOBS_DIR / "60f8442a" / "tmp" / "heldout" / "artifacts")))
+    "HELDOUT_ARTIFACTS", str(JOBS_DIR / "3f652bec" / "tmp" / "heldout" / "artifacts")))
 SUFFIX = {"action_record": ".action.md", "output_stripped": ".stripped.md"}
 
 CLASSES = ["decision", "dead_end", "outcome", "artifact_detail", "sequence"]
@@ -95,7 +95,7 @@ SMALL_CAP, MID_CAP = 60_000, 250_000
 # answering input) at 1.295 rather than the 1.0 the first projection assumed, which
 # put the 81-question plan at $11.08 against a $10 ceiling. At 2 the plan is 68
 # questions and $9.56. The revision was made with answers from NONE of the 13
-# affected sessions seen -- only f7bd7d1f and 8a4c5745 had been answered, and
+# affected sessions seen -- only 37dc4cf9 and c0be1f89 had been answered, and
 # neither loses a question -- and it depends on artifact size and the measured
 # price, never on a grade, so it cannot bias the paired contrast: both arms still
 # answer exactly the same questions. It costs power and nothing else.

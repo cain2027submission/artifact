@@ -41,10 +41,10 @@ def check(name: str, cond, detail: str = "") -> None:
 
 # ------------------------------------------------- 1. identification grader
 
-TRUE = "3b5fdb29-1111-2222-3333-444444444444"
+TRUE = "170637e9-1111-2222-3333-444444444444"
 OTHER = "ab12cd34-1111-2222-3333-444444444444"
 CANDS = [TRUE, OTHER, "ffffffff-1111-2222-3333-444444444444"]
-STEM = "2026-09-25_claude-code_3b5fdb29_a-claim-about-caching"
+STEM = "2026-09-25_claude-code_170637e9_a-claim-about-caching"
 
 check("grader: exact single correct candidate -> correct",
       R.grade_identification("Reasoning.\nsessions/%s.md" % TRUE[:8],
@@ -95,7 +95,7 @@ check("norm: a :LINE suffix does not break the match",
 
 check("norm: a .claude/worktrees/<name>/ prefix does not break the match",
       R.grade_identification(
-          ".claude/worktrees/agent-a5d4bbd4/sessions/%s.md" % TRUE[:8],
+          ".claude/worktrees/agent-2235ac18/sessions/%s.md" % TRUE[:8],
           TRUE, CANDS)["correct"])
 
 check("norm: an absolute repo path with case variation still matches",
@@ -160,14 +160,14 @@ check("norm: LINESUF regex strips :12 from a .md path",
 
 # ------------------------------------------------------ 3. scrubbing / leaks
 
-SID = "3b5fdb29-1111-2222-3333-444444444444"
+SID = "170637e9-1111-2222-3333-444444444444"
 DIRTY = ("cwd /home/user/.claude/worktrees/agent-x/ transcript "
          "/home/user/.claude/projects/-home-user/%s.jsonl note sessions/%s.md:8 "
-         "session_id: %s prefix 3b5fdb29" % (SID, TRUE, SID))
+         "session_id: %s prefix 170637e9" % (SID, TRUE, SID))
 CLEAN = R.scrub(DIRTY, TRUE, SID)
 
 check("scrub: the full session uuid is gone", SID not in CLEAN, CLEAN)
-check("scrub: the 8-hex session prefix is gone", "3b5fdb29" not in CLEAN, CLEAN)
+check("scrub: the 8-hex session prefix is gone", "170637e9" not in CLEAN, CLEAN)
 check("scrub: the .jsonl transcript path is gone", ".jsonl" not in CLEAN, CLEAN)
 check("scrub: the note stem is gone", TRUE not in CLEAN, CLEAN)
 check("scrub: leak_scan reports nothing on a scrubbed context",
@@ -176,7 +176,7 @@ check("scrub: leak_scan DOES fire on the unscrubbed original",
       set(R.leak_scan(DIRTY, TRUE, SID)) >= {"note_stem", "session_uuid",
                                              "jsonl_path"})
 check("scrub: a disguised positive is still caught (stem with spaces for dashes)",
-      "<REDACTED>" in R.scrub("note 2026-09-25 claude-code 3b5fdb29 a claim about "
+      "<REDACTED>" in R.scrub("note 2026-09-25 claude-code 170637e9 a claim about "
                               "caching here", TRUE, SID))
 check("scrub: the shipped controls carry no identifier",
       R.leak_scan("- sessions/<REDACTED>.md", TRUE, SID) == []

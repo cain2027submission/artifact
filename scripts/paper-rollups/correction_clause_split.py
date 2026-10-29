@@ -54,7 +54,7 @@ PAIRS_PER_CALL = 6
 
 # Named exclusion from the amendment: the flagged turn is a harness notice, not
 # a human correction. 1 of 294, 0.3%.
-EXCLUDED_PAIRS = {'0a464573-85'}
+EXCLUDED_PAIRS = {'fc0fb41b-85'}
 
 MIN_SEGMENT_CHARS = 15
 

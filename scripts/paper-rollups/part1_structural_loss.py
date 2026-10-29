@@ -49,7 +49,7 @@ def extract_files_from_rollup(content: str) -> Tuple[set, str]:
     OVERCOUNTS, and needs the same fix as the transcript side -- which is the
     point: the two sides were different code with different rules, so they could
     not agree about what a path is. This one takes any backticked span containing
-    a slash, so `/Users/alice`, `learnings/` and `src/mahjong` become cited artifacts,
+    a slash, so `/Users/alice`, `learnings/` and `src/game` become cited artifacts,
     and it scans the frontmatter and the trace-backlink boilerplate, whose literal
     trace path is in every note and in no transcript. Making both sides call one
     normalisation is the fix. Use path_extract.rollup_paths.
@@ -83,7 +83,7 @@ def extract_files_from_transcript(entries: List[Dict]) -> set:
     UNDERCOUNTS, and is kept only so rq3_path_recall.py can show the old and new
     numbers side by side. It reads three structured keys and nothing else, so it
     is blind to every path inside a Bash `command` string -- and Bash is 54% of
-    tool calls in this corpus. Session 715f5e5e is 38 Bash calls, 2 Edits and 1
+    tool calls in this corpus. Session 372ca0e6 is 38 Bash calls, 2 Edits and 1
     Read; this function finds one path in the whole transcript. It also does not
     normalise, so a relative citation can never be paired with an absolute one.
     Use path_extract.transcript_paths.

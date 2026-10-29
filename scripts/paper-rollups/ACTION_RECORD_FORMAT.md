@@ -151,14 +151,14 @@ when a file is Read multiple times in one session, the second and later reads ar
 **why action < output-stripped when output-stripped already removes signatures (0.00%) and boilerplate is only 3.04%**:
 the saving comes from **structured tool calls**. output-stripped caps tool inputs at 2000 chars blindly, spending tokens on the 800th char of a Write payload. action record instead renders `Write(path, 5000 chars)`, conveying the intent in ~30 chars. measured tool call representation in action record: ~6k chars vs output-stripped's ~15.7k (46.9% of 33k). that 9.7k saving, minus the +2k-4k for result digests and +100 for turn markers, nets to action at 0.71x output-stripped.
 
-**large session example (1327c110)**:
+**large session example (9c37ec9f)**:
 - raw: 4.74 MB
 - output-stripped: 368,861 chars
 - action: 193,439 chars (0.52x output-stripped)
 
 large sessions benefit more from structured tool calls because they have more Write/Edit payloads.
 
-**small session example (b766c7ce)**:
+**small session example (12a5c2da)**:
 - raw: 121 KB
 - output-stripped: 1,297 chars
 - action: 1,277 chars (0.98x output-stripped)
@@ -168,8 +168,8 @@ small sessions save little because they have few tool calls to structure.
 ## degenerate cases to test
 
 before running the full 25 sessions, prove the builder on:
-- one small session (b766c7ce, 121 KB raw) ✓ tested
-- one large session (1327c110, 4.7 MB raw, 368k stripped) ✓ tested
+- one small session (12a5c2da, 121 KB raw) ✓ tested
+- one large session (9c37ec9f, 4.7 MB raw, 368k stripped) ✓ tested
 - a session with no tool calls (or mock one by stripping them from a real transcript)
 - a session with a single turn (or mock one)
 

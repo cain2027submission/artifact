@@ -54,7 +54,7 @@ from rq3_raw_transcript_arm import DATA, load_records  # noqa: E402
 # rather than a change of method. At the published max_tokens=2048 the reply is cut
 # mid-string on these sessions -- 5 questions each quoting a verbatim ground truth
 # does not fit -- json.loads raises "Unterminated string", generate_questions
-# returns [], and the session yields nothing. Measured on f7bd7d1f: truncated at
+# returns [], and the session yields nothing. Measured on 37dc4cf9: truncated at
 # char 1759, inside question 1 of 5. Nothing else about generation moves: same
 # model, same prompt, same transcript_text[:30000]. The prompt, the model and the
 # truncation point are what a question set has to hold fixed to be comparable; an

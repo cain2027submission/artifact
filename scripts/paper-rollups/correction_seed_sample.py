@@ -14,8 +14,8 @@ The draw is split in two halves by the shuffled order:
 - the remaining turns are the **held-out** half. they are scored exactly once,
   and the prompt is never revised after seeing that score.
 
-The held-out half is what replaces session ``6d7b783e`` as the positive
-control. ``6d7b783e``'s correction is quoted verbatim in the pre-registration,
+The held-out half is what replaces session ``e16fb0cc`` as the positive
+control. ``e16fb0cc``'s correction is quoted verbatim in the pre-registration,
 so any detector written afterwards has read the answer; it is kept only as a
 named sanity check and its result carries no weight.
 
@@ -40,7 +40,7 @@ from human_turns import frame_sessions, human_turns, load_transcript
 # it gives a convenient sample.
 #
 # The sample was drawn twice and the seed is deliberately unchanged between the
-# two. The first draw (committed unlabelled at f28cb76e) was read, and 13 of its
+# two. The first draw (committed unlabelled at c1b27a61) was read, and 13 of its
 # 60 turns turned out not to be human-authored at all: six harness continuation
 # summaries, four benchmark probes from this project's own answer_speed harness,
 # two `!` shell passthroughs and a task notification. That is a defect in the

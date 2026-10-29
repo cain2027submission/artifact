@@ -16,10 +16,10 @@ fixed here rather than patched at one call site:
 2. The transcript side read only `file_path`/`path`/`paths` off `tool_use`
    blocks. Bash is 54% of tool calls in this corpus and its paths are inside the
    `command` string, so the single most common way a session touches a file was
-   invisible. Session 715f5e5e is 38 Bash calls, 2 Edits and 1 Read; the old
+   invisible. Session 372ca0e6 is 38 Bash calls, 2 Edits and 1 Read; the old
    extractor found exactly one path in it.
 
-3. Neither side normalised. A rollup writes `AGENTS.md` or `src/mahjong/scene.ts`
+3. Neither side normalised. A rollup writes `AGENTS.md` or `src/game/scene.ts`
    where the transcript holds an absolute home-qualified path and a
    `.claude/worktrees/<name>/` -qualified absolute path. Same file, no match.
 
@@ -132,10 +132,10 @@ NOISE_RE = re.compile(
 LINEREF_RE = re.compile(r":(\d+)(?::(\d+))?$")
 
 # .../.claude/worktrees/<name>/rest -> .../rest. A worktree is a checkout of the
-# same repo at a different path, so a rollup naming src/mahjong/scene.ts and a
+# same repo at a different path, so a rollup naming src/game/scene.ts and a
 # transcript holding
-# /repo/.claude/worktrees/stack-holder-below-board/src/mahjong/scene.ts are the
-# same file. Without this collapse session 715f5e5e matches nothing.
+# /repo/.claude/worktrees/feature-branch/src/game/scene.ts are the
+# same file. Without this collapse session 372ca0e6 matches nothing.
 WORKTREE_RE = re.compile(r"/\.claude/worktrees/[^/]+/")
 
 # Surrounding syntax a path picks up in markdown, JSON and shell.
@@ -214,7 +214,7 @@ def normalise(raw: str, root: str | None = None) -> str | None:
     if not base:
         return None
     # Must be a file, and must end in an extension we recognise. Home directories,
-    # `learnings/` and `.../src/mahjong` were all counted as cited artifacts by
+    # `learnings/` and `.../src/game` were all counted as cited artifacts by
     # the old rollup extractor and none of them can appear as a file in a
     # transcript; `local models.` and `see section 3.2` are prose that an
     # any-dot-will-do rule admitted.
@@ -268,11 +268,11 @@ def normalise_variants(raw: str, root: str | None = None) -> set[str]:
 
     A relative citation gets two keys: root-resolved, and left relative. This is
     needed because `project_dir` is the directory the *session started in*, not
-    the repo root of the file it touched. Session 715f5e5e ran from a home
-    directory and edited `src/mahjong/scene.ts` in a mahjong worktree; resolving
+    the repo root of the file it touched. Session 372ca0e6 ran from a home
+    directory and edited `src/game/scene.ts` in a game worktree; resolving
     that citation against the wrong root fabricates a nonexistent path which is a
     suffix of nothing, so root-resolution alone made the rollup match zero of the
-    files it had plainly named. Keeping the unresolved `src/mahjong/scene.ts`
+    files it had plainly named. Keeping the unresolved `src/game/scene.ts`
     lets suffix matching find it.
 
     Aliases are used on the rollup (numerator) side only. The denominator is built
@@ -475,7 +475,7 @@ def match_transcript_paths(rollup: Iterable[str], transcript: Iterable[str]) -> 
 
     A match is exact, or a segment-boundary suffix relation in either direction.
     Suffix-either-way is what lets a rollup that says `AGENTS.md` or
-    `src/mahjong/scene.ts` count as naming the absolute file, and a rollup that
+    `src/game/scene.ts` count as naming the absolute file, and a rollup that
     quotes a longer worktree-qualified path count as naming the canonical one.
     """
     tset = set(transcript)

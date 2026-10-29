@@ -26,7 +26,7 @@ import arm_rates as ar  # noqa: E402
 DATA = ar.DATA
 OUT = DATA / "regrade-2026-10-09" / "renumber.json"
 REC = ("correct", "partially_correct")
-NO_TOOL_SESSIONS = ("9d4c165a", "a596be9f", "d7aa4f50")   # tool_calls == 0 in the call-only arm
+NO_TOOL_SESSIONS = ("e90dc04c", "d9a052fe", "d76df796")   # tool_calls == 0 in the call-only arm
 
 
 def rows(name, **flt):

@@ -393,7 +393,7 @@ def stripped_transcript_cost() -> dict:
 def merge_into_rq5_json(out: dict, path: Path = RQ5_JSON) -> None:
     """Fold the cold-cache break-even into rq5_generation_cost.json, idempotently.
 
-    The shape is the one hand-merged in f49672fa: the corrected figures take the
+    The shape is the one hand-merged in d5d0b22b: the corrected figures take the
     published keys, the old warm-cache values move to `*_warm_cache_uncorrected`.
     Already-merged files keep their existing uncorrected values (never nested
     twice) and only have the corrected figures refreshed. Key order is kept.

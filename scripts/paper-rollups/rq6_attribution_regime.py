@@ -56,7 +56,7 @@ a positive:
   * THE FROZEN MANIFEST defines the session set. `sessions/` grew from 499 notes
     at snapshot time to ~1,114, so globbing it is a known reproducibility defect
     in this paper. Every drop is recorded by reason, including the one pruned
-    transcript (bb26f10d).
+    transcript (3a0d132f).
   * FINDING RECALL IS CONTAMINATED FOR ONE ARM BY CONSTRUCTION. The rollup
     snippet opens with the very heading the grader scores against, so its score
     is a copy task, not recall. That is measured rather than hidden:
@@ -243,9 +243,9 @@ def first_user_prompt(raw: str) -> str:
     This is the label a candidate session is identified BY, and it has to come
     from a source independent of the rollup note. The obvious label -- the note's
     own path -- is unusable: a rollup filename is mechanically derived from the
-    note's claim heading, so `sessions/..._rrf-treats-correlated-evidence-as-
-    independent.md` beside a snippet opening "rrf treats correlated evidence as
-    independent votes" is not an attribution task, it is a string match against
+    note's claim heading, so `sessions/..._example-claim-
+    heading.md` beside a snippet opening "example claim
+    heading" is not an attribution task, it is a string match against
     the answer key. The date prefix leaks the same way, because a rollup body
     carries a `**session:** <date>` line. Both are removed from the label.
     """
@@ -1030,8 +1030,8 @@ def degenerate_checks() -> None:
     print("section_body for a heading that is absent -> %r"
           % section_body("## a real claim about caching\n\nbody\n", "missing"))
     print("empty snippet: identification grade -> %r"
-          % grade_identification("", "3b5fdb29-0000-0000-0000-000000000000",
-                                 ["3b5fdb29-0000-0000-0000-000000000000",
+          % grade_identification("", "170637e9-0000-0000-0000-000000000000",
+                                 ["170637e9-0000-0000-0000-000000000000",
                                   "ab12cd34-0000-0000-0000-000000000000"]))
     print("rollup with no opening request -> first_user_prompt=%r"
           % first_user_prompt('{"message": {"role": "user", "content": "hi"}}'))
@@ -1044,10 +1044,10 @@ def degenerate_checks() -> None:
     print("overlap with empty reference -> %r" % overlap("", "anything"))
     print("scrub of a transcript-shaped leak -> %r"
           % scrub("cwd /home/user/.claude/worktrees/agent-x/ file "
-                  "/home/user/.claude/projects/p/3b5fdb29-0000-0000-0000-000000000000"
-                  ".jsonl sessions/2026-09-25_claude-code_3b5fdb29_x.md:12",
-                  "2026-09-25_claude-code_3b5fdb29_x",
-                  "3b5fdb29-0000-0000-0000-000000000000"))
+                  "/home/user/.claude/projects/p/170637e9-0000-0000-0000-000000000000"
+                  ".jsonl sessions/2026-09-25_claude-code_170637e9_x.md:12",
+                  "2026-09-25_claude-code_170637e9_x",
+                  "170637e9-0000-0000-0000-000000000000"))
     print("gate_verdict on a leaking arm -> passed=%s"
           % gate_verdict({"wrong_note_snippet": {"pct": 60.0},
                           "noop": {"pct": 12.0},

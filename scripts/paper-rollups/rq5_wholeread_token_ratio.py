@@ -270,7 +270,7 @@ def aggregate(rows: List[dict], drops: List[dict], manifest: dict,
 
     The guard is the point: a drop absorbed as a zero, or as a ratio of 1,
     would move the median silently, and this corpus has at least one session
-    (`bb26f10d`) whose transcript has been pruned since the snapshot.
+    (`3a0d132f`) whose transcript has been pruned since the snapshot.
     """
     for r in rows:
         if "drop" in r:
@@ -612,7 +612,7 @@ def main() -> None:
         if rollup is None:
             # The transcript state is recorded even when the rollup is what
             # dropped the session, so a session that fails BOTH checks -- as
-            # bb26f10d does -- is not filed under the first one and lost.
+            # 3a0d132f does -- is not filed under the first one and lost.
             drops.append({"session_id": sid, "reason": reason,
                           "transcript_also_missing":
                               tp is None or not Path(tp).exists()})

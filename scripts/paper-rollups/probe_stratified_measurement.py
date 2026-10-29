@@ -77,7 +77,7 @@ def find_rollup_by_uuid(session_id: str) -> Optional[Path]:
         # agent-a1f01a4a2bd15fb1c -> extract hex part after "agent-a"
         prefix = session_id[7:15] if len(session_id) > 15 else session_id[7:]
     elif len(session_id) >= 8:
-        # 219e2149-66c1-4549-902b-aa4b6b8413c9 -> 219e2149
+        # ac14193f-0000-4000-8000-000000000002 -> ac14193f
         prefix = session_id[:8]
     else:
         return None

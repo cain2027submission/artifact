@@ -111,12 +111,12 @@ def main():
         "rollup_minus_output_stripped": compare(roll, S),
         "rollup_minus_no_digest": compare(roll, N),
         "sensitivity_mtime_split_weak_writer_inference": split,
-        "sensitivity_alt_note_0328a5cd": {"rows": [{"record_id": r["record_id"], "grade": r["grade"]} for r in sens],
-            "primary_rows": [{"record_id": r["record_id"], "grade": r["grade"]} for r in roll if r["session_prefix"] == "0328a5cd"]},
+        "sensitivity_alt_note_2ce8e87b": {"rows": [{"record_id": r["record_id"], "grade": r["grade"]} for r in sens],
+            "primary_rows": [{"record_id": r["record_id"], "grade": r["grade"]} for r in roll if r["session_prefix"] == "2ce8e87b"]},
         "provenance": "writer unknown/inferred for all 98 notes; frontmatter model is session model, not writer; see availability.json",
     }
     (RR / "results.json").write_text(json.dumps(res, indent=2) + "\n")
-    print(json.dumps({k: res[k] for k in ("arms_on_covered", "rollup_minus_output_stripped", "rollup_minus_no_digest", "sensitivity_mtime_split_weak_writer_inference", "sensitivity_alt_note_0328a5cd")}, indent=1))
+    print(json.dumps({k: res[k] for k in ("arms_on_covered", "rollup_minus_output_stripped", "rollup_minus_no_digest", "sensitivity_mtime_split_weak_writer_inference", "sensitivity_alt_note_2ce8e87b")}, indent=1))
 
 
 main()

@@ -18,7 +18,7 @@
   "projects_dir": "~/.claude/projects",
   "jobs_dir": "~/.claude/jobs",
   "telemetry_log": "~/.claude/prompt-context-telemetry.jsonl",
-  "traces_dir": "../agent-session-traces/traces",
+  "traces_dir": "../session-traces/traces",
 
   "__identity__": [
     "Strings that appear INSIDE the corpus text, which the parsing and",

@@ -75,7 +75,7 @@ MAX_BODY_CHARS = 500
 RECOVERABLE = ("correct", "partially_correct")
 # noop_opaque exists because `noop` turned out NOT to be a no-op. A session
 # rollup's filename is derived from its claim heading, so "- sessions/2026-09-25_
-# claude-code_3b5fdb29_grep-on-the-append-only-ledg.md" ships the finding in the
+# claude-code_170637e9_example-claim-heading.md" ships the finding in the
 # path -- and the hook's own _restates_path() then drops the heading as redundant,
 # collapsing rollup_pointer onto noop for 45 of 89 records. noop_opaque truncates
 # the filename at the session id, so it asserts a session note exists and carries

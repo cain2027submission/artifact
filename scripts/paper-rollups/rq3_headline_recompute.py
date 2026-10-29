@@ -10,7 +10,7 @@ What this establishes, in order:
    scripts appending to the same path concurrently -- and because
    rq3_retention_summary.load_records stops at the first byte it cannot decode,
    the published analysis saw exactly the 124 records before that hole. Commit
-   ec80f52b then removed the hole as data hygiene, which silently widened this
+   8a9d84b7 then removed the hole as data hygiene, which silently widened this
    script's pool from 124 records to all 349 and made both published figures stop
    reproducing. The pool is therefore selected explicitly below (see
    published_pool) rather than inherited from the file's own corruption.
@@ -81,7 +81,7 @@ def published_pool(rows: list[dict]) -> list[dict]:
     File order is not an arbitrary choice here, it is the actual provenance: the
     published consumer was load_records, whose stream decoder stopped at the NUL
     hole that used to sit at line 125, so what it scored was the file's first 124
-    records and nothing after them. Verified against the pre-ec80f52b file: all
+    records and nothing after them. Verified against the pre-8a9d84b7 file: all
     124 decode byte-identically, in the same order, as the first 124 of the
     current file.
 
@@ -217,7 +217,7 @@ def main() -> int:
     # No-op control for the slice. If the whole file reproduced the published
     # figures too, published_pool would be doing nothing and the REPRODUCED line
     # above would be worth nothing. Measured: the full 349 give 17.2% [12.8, 22.7]
-    # over 38/221, which is why ec80f52b turned this gate red without touching a
+    # over 38/221, which is why 8a9d84b7 turned this gate red without touching a
     # single number in the paper.
     pooled_all = hoa(decoded)
     if len(decoded) > len(pub) and pooled_all["pct"] == PUBLISHED_POOLED["pct"]:

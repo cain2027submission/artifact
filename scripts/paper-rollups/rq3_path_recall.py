@@ -138,7 +138,7 @@ def main() -> None:
     rows = []
     # A transcript can be pruned after the snapshot was frozen -- the raw
     # transcripts are cleaned up on a 180-day window and the rollup note outlives
-    # the .jsonl it was written from. One of the 300 (bb26f10d) has gone since
+    # the .jsonl it was written from. One of the 300 (3a0d132f) has gone since
     # 2026-09-27, so it is recorded here and dropped rather than crashing the run
     # or being silently absorbed into the denominator as zero paths.
     unreadable: list[str] = []

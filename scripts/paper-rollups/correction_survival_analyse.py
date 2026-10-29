@@ -158,7 +158,7 @@ def main() -> None:
         'grader': 'claude-sonnet-5 via the local gateway, one fact per call, thinking disabled, class hidden from the grader',
         'pairs_in_file': len(splits),
         'named_exclusions': {
-            '0a464573-85': 'harness notice, not a human correction; excluded in the split step, 1 of 294, 0.3%'
+            'fc0fb41b-85': 'harness notice, not a human correction; excluded in the split step, 1 of 294, 0.3%'
         },
         'pairs_with_a_clause': len(pairs),
         'pairs_excluded_neither_clause': sum(
