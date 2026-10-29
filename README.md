@@ -32,9 +32,7 @@ Other files in `scripts/paper-rollups/`:
   machine-specific settings), [`grading_common.py`](scripts/paper-rollups/grading_common.py), [`action_record.py`](scripts/paper-rollups/action_record.py)
 - **pipeline steps** the scripts above read data from: question generation, held-out
   and replication sets, regrading
-- **checks**: `test_*.py` (unit tests), [`verify_determinism.py`](scripts/paper-rollups/verify_determinism.py), [`check_anonymity.py`](scripts/paper-rollups/check_anonymity.py),
-  and the manuscript gates `check_paper_*.py` / [`audit_paper_numbers.py`](scripts/paper-rollups/audit_paper_numbers.py) (these read
-  the LaTeX source, which is not included)
+- **checks**: `test_*.py` (unit tests) and [`verify_determinism.py`](scripts/paper-rollups/verify_determinism.py) (verifies byte-identical reproduction)
 
 `scripts/unused/` holds exploratory and superseded scripts that no reported result
 depends on. They are kept for completeness and are not expected to run from there.
